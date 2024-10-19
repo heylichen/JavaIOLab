@@ -1,5 +1,11 @@
-com\iolab\channel\ChannelClient.class
 com\iolab\channel\DatagramChannelClient.class
-com\iolab\channel\ChannelServer.class
+com\iolab\channel\socketchannel\errorecho\EchoClientChannel.class
+com\iolab\channel\socketchannel\errorecho\SocketUtils.class
 com\iolab\channel\ServerSocketSelector.class
+com\iolab\channel\socketchannel\errorecho\EchoServerChannel.class
 com\iolab\channel\DatagramChannelServer.class
+com\iolab\channel\socketchannel\ChannelServer.class
+com\iolab\channel\socketchannel\selectorecho\SelectorEchoClient.class
+com\iolab\channel\socketchannel\ChannelClient.class
+com\iolab\channel\socketchannel\selectorecho\SelectorEchoServer.class
+com\iolab\channel\util\SleepUtil.class

@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>io</artifactId>
+    <artifactId>netty</artifactId>
     <packaging>jar</packaging>
 
-    <name>io</name>
+    <name>netty</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -21,6 +21,11 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
         </dependency>
     </dependencies>
 </project>
