@@ -1,6 +1,5 @@
-package netty.lab.demo.time.pojo;
+package demo.time.pojo;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;

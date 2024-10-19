@@ -1,4 +1,4 @@
-package netty.lab.demo.time.solution2;
+package demo.time.solution2;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

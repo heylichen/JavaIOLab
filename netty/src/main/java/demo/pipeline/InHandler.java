@@ -1,18 +1,18 @@
-package netty.lab.demo.pipeline;
+package demo.pipeline;
 
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelOutboundHandlerAdapter;
-import io.netty.channel.ChannelPromise;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * Handles a server-side channel.
  */
-public class OutHandler extends ChannelOutboundHandlerAdapter { // (1)
+public class InHandler extends ChannelInboundHandlerAdapter { // (1)
 
     @Override
-    public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception { // (2)
+        // Discard the received data silently.
         System.out.println(ctx.name() + " channel enter");
-        ctx.writeAndFlush(msg, promise);
+        ctx.fireChannelRead(msg);
         System.out.println(ctx.name() + " channel exit");
     }
 

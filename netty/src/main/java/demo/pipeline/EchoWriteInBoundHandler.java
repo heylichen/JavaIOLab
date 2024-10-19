@@ -1,4 +1,4 @@
-package netty.lab.demo.pipeline;
+package demo.pipeline;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -6,13 +6,12 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 /**
  * Handles a server-side channel.
  */
-public class InHandler extends ChannelInboundHandlerAdapter { // (1)
+public class EchoWriteInBoundHandler extends ChannelInboundHandlerAdapter { // (1)
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception { // (2)
-        // Discard the received data silently.
+    public void channelRead(ChannelHandlerContext ctx, Object msg) { // (2)
         System.out.println(ctx.name() + " channel enter");
-        ctx.fireChannelRead(msg);
+        ctx.write(msg); // (1)
         System.out.println(ctx.name() + " channel exit");
     }
 

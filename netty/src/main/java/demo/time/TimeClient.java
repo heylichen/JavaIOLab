@@ -1,4 +1,4 @@
-package netty.lab.demo.time;
+package demo.time;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

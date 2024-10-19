@@ -1,4 +1,4 @@
-package netty.lab.demo.time.pojo;
+package demo.time.pojo;
 
 import java.util.Date;
 

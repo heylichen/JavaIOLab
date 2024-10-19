@@ -1,4 +1,4 @@
-package netty.lab.demo.pipeline;
+package demo.pipeline;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
