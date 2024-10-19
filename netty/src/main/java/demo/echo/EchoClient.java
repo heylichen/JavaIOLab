@@ -1,4 +1,4 @@
-package demo.time.pojo;
+package demo.echo;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -10,7 +10,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 
-public class TimeClient {
+public class EchoClient {
 
   public static void main(String[] args) throws Exception {
     String host = "127.0.0.1";
@@ -25,9 +25,7 @@ public class TimeClient {
       b.handler(new ChannelInitializer<SocketChannel>() {
         @Override
         public void initChannel(SocketChannel ch) throws Exception {
-          ch.pipeline()
-              .addLast(new TimeDecoder(),
-                  new TimeClientHandler());
+          ch.pipeline().addLast(new EchoClientHandler());
         }
       });
 
